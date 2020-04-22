@@ -1,33 +1,33 @@
 import React from 'react';
 
-const ImageCard = () => {
+const ImageCard = ({ image }) => {
 
     return (
 
         <div className="max-w-sm rounded overflow-hidden shadow-lg">
 
             {/* Image */}
-            <img src="https://source.unsplash.com/random" alt="" className="w-full"/>
+            <img src={image.webformatURL} alt="" className="w-full"/>
 
             {/* Card Content */}
             <div className="px-6 py-4">
 
                 {/* Author */}
-                <div className="font-bold text-purple-500 text-xl mb-2"> Photo By: Jim Dean</div>
+                <div className="font-bold text-purple-500 text-xl mb-2"> Photo By: {image.user}</div>
 
                 {/* Stats */}
                 <ul>
 
                     <li>
-                        <strong>Views: </strong> 4000
+                        <strong>Views: </strong> {image.views}
                     </li>
 
                     <li>
-                        <strong>Downloads: </strong> 300
+                        <strong>Downloads: </strong> {image.downloads}
                     </li>
 
                     <li>
-                        <strong>Likes: </strong> 20
+                        <strong>Likes: </strong> {image.likes}
                     </li>
 
                 </ul>
