@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const ImageSearch = () => {
+const ImageSearch = ({ searchText }) => {
+
+    // State for input
+    const [text, setText] = useState('');
+
+    // For submitting search
+    const onSubmit = (e) => {
+
+        e.preventDefault();
+
+        searchText(text);
+        
+    }
 
     return (
 
