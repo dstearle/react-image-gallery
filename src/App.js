@@ -31,6 +31,19 @@ function App() {
 		<ImageSearch searchText={(text) => setTerm(text)}/>
 
 		{/* Card Grid */}
+
+		{/* For No Results */}
+		{
+		
+			// Checks to see image length
+			!isLoading && images.length === 0 && 
+
+			// No Results
+			<h1 className="text-6xl text-center mx-auto mt-32">No Results</h1>
+			
+		}
+
+		{/* For Loading */}
 		{isLoading ? 
 		
 			// If page is loading
