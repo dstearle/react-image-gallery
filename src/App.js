@@ -21,14 +21,14 @@ function App() {
 	)
     .catch(err => console.log(err));
 
-  }, []);
+  }, [term]);
 
   return (
 
 	<div className="container mx-auto">
 
 		{/* Image Search */}
-		<ImageSearch />
+		<ImageSearch searchText={(text) => setTerm(text)}/>
 
 		{/* Card Grid */}
 		{isLoading ? 
