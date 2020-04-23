@@ -27,18 +27,28 @@ function App() {
 	<div className="container mx-auto">
 
 		{/* Card Grid */}
-		<div className="grid grid-cols-3 gap-4">
+		{isLoading ? 
+		
+			// If page is loading
+			<h1 className="text-6xl text-center mx-auto mt-32">Loading...</h1>
+		
+			: 
+		
+			// When page has loaded
+			<div className="grid grid-cols-3 gap-4">
 
-			{/* Images */}
-			{images.map(
-				
-					image => ( <ImageCard key={image.id} image={image}/> )
+				{/* Images */}
+				{images.map(
+					
+						image => ( <ImageCard key={image.id} image={image}/> )
 
-				)
-				
-			}
+					)
+					
+				}
 
-		</div>
+			</div>
+
+		}
 
 	</div>
 
